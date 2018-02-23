@@ -1,0 +1,37 @@
+/*
+ * With groovy plugin, groovy (std) directory gets automatically recognized
+ * Groovy compiler version decided by the groovy dependency
+ */
+apply plugin: 'java'
+apply plugin: 'maven'
+apply plugin: 'groovy'
+
+group = 'com.ns'
+version = '1.0-SNAPSHOT'
+
+description = """Sample Project Groovy Gradle"""
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+repositories {
+        
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+
+dependencies {
+    compile group: 'org.codehaus.groovy', name: 'groovy-all', version:'2.4.13'
+    testCompile group: 'junit', name: 'junit', version:'4.8.1'
+}
+
+//display which tests executed (alternatively run gradle clean test -i)
+test {
+	afterTest { desc, result ->
+		logger.quiet "Test: ${desc.name} [${desc.className}], Result: ${result.resultType}"
+	}
+}
+
+defaultTasks 'test'
