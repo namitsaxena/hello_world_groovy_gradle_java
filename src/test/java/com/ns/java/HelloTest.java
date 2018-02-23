@@ -1,12 +1,9 @@
-package com.ns;
+package com.ns.java;
 
+import org.junit.Assert;
 import org.junit.Test;
 
 import com.namitsaxena.examples.HelloWorld;
-import java.text.ParseException;
-
-import junit.framework.Assert;
-
 
 
 /**
@@ -19,7 +16,7 @@ public class HelloTest
      * @throws ParseException 
      */
     @Test
-    public void helloTest() throws ParseException
+    public void helloTest() 
     {
         HelloWorld hello = new HelloWorld();
         Assert.assertTrue(hello.hello("Test").equals("Hello Test!!!"));

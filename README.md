@@ -5,6 +5,8 @@ Starter project with support for:
 * Groovy
 * Gradle
 * Junit
+* Groovy Test Case
+* Spock
 
 ## Building
 
@@ -13,3 +15,14 @@ Starter project with support for:
 
 ### Gradle
 * gradle clean test 
+
+## Requirements
+The project can be run from maven, gradle or eclipse
+* java 1.8
+* mvn
+* gradle
+* groovy
+* Eclipse
+  * Groovy Eclipse
+  * Gradle BuildSghip Plugin
+

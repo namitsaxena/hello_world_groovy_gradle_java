@@ -4,7 +4,7 @@ class HelloGroovy {
 	def String hello(name = 'Groovy')
 	{
 		def msg = "Hello ${name} from Groovy"
-		println msg
+		//println msg
 		return msg
 	}
 }
